@@ -1,48 +1,75 @@
-# TastyEats
+# 🍽️ TastyEats – Your Smart Kitchen Assistant
 
-A smart kitchen assistant that helps with recipes, cooking techniques, and meal planning using advanced LLM technology.
+TastyEats is an AI-powered kitchen assistant that helps you cook smarter, not harder. Whether you're a beginner or a seasoned home chef, it assists with recipes, cooking techniques, ingredient substitutions, and meal planning—all powered by cutting-edge LLM (Large Language Model) technology via LangChain.
 
-## Description
 
-TastyEats is an AI-powered assistant designed to enhance your cooking experience. It leverages Large Language Models (LLMs) to suggest recipes based on available ingredients, provide step-by-step cooking instructions, offer substitution advice, and more.
 
-## Features
+---
 
-- Recipe recommendations based on ingredients you have
-- Step-by-step cooking instructions powered by LLM technology
-- Intelligent ingredient substitution suggestions
-- AI-driven meal planning assistance
-- Dietary restriction accommodation with contextual understanding
-- Interactive cooking technique tutorials
+## ✨ Features
 
-## Installation
+- 🔍 **Recipe Recommendations** – Get recipe ideas based on ingredients you have at home.  
+- 🧑‍🍳 **Step-by-Step Instructions** – Clear, AI-generated cooking directions.  
+- 🔄 **Smart Substitutions** – Don’t have an ingredient? Get instant alternatives.  
+- 📅 **Meal Planning Assistant** – AI-generated plans tailored to your preferences and schedule.  
+- 🥦 **Dietary Restrictions Aware** – Handles vegetarian, vegan, gluten-free, and more.  
+- 🎥 **Interactive Tutorials** – Learn cooking techniques with AI-guided walkthroughs.
 
-### Prerequisites
-- Python 3.8 or higher
-- pip (Python package installer)
+---
+
+## 🛠️ Tech Stack
+
+- **Backend:** Python, Django  
+- **AI/LLM:** LangChain + Groq_API  
+- **Dependencies:** Managed via `requirements.txt`
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+Ensure you have the following installed:
+- Python 3.8+
+- `pip` (Python package installer)
 - Git
 
-### Setup Instructions
+### 📦 Installation
 
-1. **Clone the repository**
+```bash
+# Clone the repository
+git clone https://github.com/Kunal9027/Chef_bot.git
+cd Chef_bot
 
-
-# Create a virtual environment
+# Create and activate a virtual environment
 python -m venv venv
 
-# Activate the virtual environment
-# On Windows
+# Windows
 venv\Scripts\activate
-# On macOS/Linux
+
+# macOS/Linux
 source venv/bin/activate
 
+# Install dependencies
 pip install -r requirements.txt
+```
 
-# .env file
-LLM_API_KEY=your_api_key_here
-SECRET_KEY=your_django_secret_key
-DEBUG=True
+## 🔐 Environment Variables
+- Create a .env file in the root directory with the following content:
 
-Access the application
+``` .env
+API_KEY=your_api_key_here
+```
+# 🌐 Accessing the Application
+- Once everything is set up, run your Django server:
 
-Open your browser and navigate to http://127.0.0.1:8000/
+```
+python manage.py runserver
+```
+- Then open your browser and go to:
+```
+http://127.0.0.1:8000/chefbot
+```
+
+
+
