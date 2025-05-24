@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'Css/index.css' %}">
+  <script src="{% static 'your_app/js/script.js' %}"></script>
+
+
+</head>
+<body>
+<div class="animated-background" id="animated-bg"></div>
+  
+   <!-- Main content wrapper -->
+   <div class="main-content-wrapper">
+   
+    {%include "elements/navbar.html"%} 
+
+    <!-- Page content (for demonstration) -->
+  <main class="page-content">
+    <h1>Your AI Kitchen Companion</h1>
+  <p style="color: grey;">Craving a recipe? Need cooking tips? Ask anything  TastyEats AI is your smart, instant guide to delicious food, anytime.</p>
+
+    <section class="search-section">
+      <form autocomplete="off" method="post" class="search-form" >
+        {% csrf_token %}
+        <input type="search" id="cheif" name="cheif" class="search-input" placeholder="Search for recipes, ingredients, or cuisines...">
+        <button type="submit" class="search-button">Ask Chef</button>
+      </form>
+    </section>
+
+    {% if ingredients or recipe or fact or information or error %}
+    <section class="results-section">
+      <div class="results-header">
+        <h2>👨‍🍳 AI Response</h2>
+      </div>
+      
+      <div class="results-content">
+
+        {% if error %}
+        <div class="result-item">
+          <div class="result-image">❌ </div>
+          <div class="result-info">
+            <h3>Error</h3>
+            <p>{{ error }}</p>
+            
+          </div>
+        </div>
+        {% endif %}
+
+        {% if ingredients %}
+        <div class="result-item">
+          
+          <div class="result-info">
+            <h3>🍅 Ingredients</h3>
+            
+            
+            <ul class="list-menu">
+              
+              {% for item in ingredients %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+
+          </div>
+        </div>
+        {% endif %}
+        
+        {% if recipe %}
+        <div class="result-item">
+          
+          <div class="result-info">
+            <h3>📖 Recipe</h3>
+            <ul class="list-menu">
+              
+              {% for item in recipe %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+            
+          </div>
+        </div>
+        {% endif %}
+        
+        {% if fact %}
+        <div class="result-item">
+          <div class="result-image">🎉</div>
+          <div class="result-info">
+            <h3>Fun Fact</h3>
+            <p>{{ fact }}</p>
+            
+          </div>
+        </div>
+        {% endif %}
+
+        {% if information %}
+        <div class="result-item">
+          <div class="result-image">📌</div>
+          <div class="result-info">
+            <h3>Information</h3>
+            <p>{{ information }}</p>
+            
+          </div>
+        </div>
+        {% endif %}
+        
+      </div>
+    </section>
+    {% endif %}
+
+  </main>
+
+  {%include "elements/footer.html"%}
+  
+</div>
+
+
+<script src="{% static '/Js/bg.js' %}"></script>
+
+</body>
+</html>
