@@ -10,10 +10,9 @@ TastyEats is an AI-powered kitchen assistant that helps you cook smarter, not ha
 
 - 🔍 **Recipe Recommendations** – Get recipe ideas based on ingredients you have at home.  
 - 🧑‍🍳 **Step-by-Step Instructions** – Clear, AI-generated cooking directions.  
-- 🔄 **Smart Substitutions** – Don’t have an ingredient? Get instant alternatives.  
-- 📅 **Meal Planning Assistant** – AI-generated plans tailored to your preferences and schedule.  
+- 🔄 **Smart Substitutions** – Don’t have an ingredient? Ask AI and Get instant alternatives.   
 - 🥦 **Dietary Restrictions Aware** – Handles vegetarian, vegan, gluten-free, and more.  
-- 🎥 **Interactive Tutorials** – Learn cooking techniques with AI-guided walkthroughs.
+  
 
 ---
 
